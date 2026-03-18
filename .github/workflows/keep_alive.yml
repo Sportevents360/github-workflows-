@@ -1,0 +1,18 @@
+name: Despertador de Supabase
+on:
+  schedule:
+    - cron: '0 0 */3 * *' # Se ejecuta cada 3 días automáticamente
+  workflow_dispatch: # Nos permite darle a un botón para probarlo manualmente
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hacer ping a la base de datos
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
+        run: |
+          curl -X GET "$SUPABASE_URL" \
+          -H "apikey: $SUPABASE_ANON_KEY" \
+          -H "Authorization: Bearer $SUPABASE_ANON_KEY"

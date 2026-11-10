@@ -1,6 +1,8 @@
 # Memoria técnica: Despertador de Supabase
 
 ## Qué es
+**Desactivado desde el 2026-11-10.** El proyecto lo despierta ahora solo el robot diario de `Sportevents360/supabase-pinger`, que consulta tablas reales; ver su `docs/MEMORIA_TECNICA.md`. Este workflow se conserva por si hiciera falta reactivarlo (Actions → Enable workflow).
+
 Repositorio de Sportevents360 con una única tarea programada de GitHub Actions que hace una llamada a un proyecto de Supabase cada 3 días, para que Supabase no lo pause por inactividad (el plan gratuito pausa proyectos sin actividad).
 
 ## Dónde vive
